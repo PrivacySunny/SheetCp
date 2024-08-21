@@ -36,14 +36,16 @@ const QuestionList: React.FC = () => {
   const fetchQuestions = async () => {
     try {
       setLoading(true);
-      const response = await fetch("/api/questions");
+      const response = await fetch("http://localhost:3000/api/questions", {
+        cache: "no-store",
+      });
       const data = await response.json();
 
       if (response.ok) {
         setQuestions(data);
         setFilteredQuestions(data);
       } else {
-        console.log("Error Fetching Questions:", data.message);
+        throw new Error("Failed to fetch data!!");
       }
     } catch (error: any) {
       console.log("Error Fetching Questions: ", error);
