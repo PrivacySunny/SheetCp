@@ -1,7 +1,7 @@
 import React from "react";
 import DsaPage from "@/components/DsaPage";
 const page = () => {
-  return <div>Hello</div>;
+  return <DsaPage />;
 };
 
 export default page;
