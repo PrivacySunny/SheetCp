@@ -36,11 +36,11 @@ const QuestionList: React.FC = () => {
   const fetchQuestions = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/questions", {
+      const response = await fetch("/api/questions", {
         cache: "no-store",
       });
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (response.ok) {
         setQuestions(data);
         setFilteredQuestions(data);
@@ -285,7 +285,7 @@ const QuestionList: React.FC = () => {
                     onChange={(e) => setTags(e.target.value)}
                   />
                   <Button
-                    // onClick={handleAddQuestion}
+                    onClick={handleAddQuestion}
                     className="bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300"
                   >
                     Add Question
