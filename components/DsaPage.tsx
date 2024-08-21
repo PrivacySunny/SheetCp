@@ -246,7 +246,7 @@ const QuestionList: React.FC = () => {
 
             {/* Add Question Button */}
             {/* Uncomment the below section to add the "Add Question" button */}
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <Popover>
                 <PopoverTrigger>
                   <Button className="w-full sm:w-auto bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300">
@@ -292,7 +292,7 @@ const QuestionList: React.FC = () => {
                   </Button>
                 </PopoverContent>
               </Popover>
-            </div>
+            </div> */}
           </ul>
         </>
       )}
