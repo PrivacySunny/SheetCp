@@ -40,7 +40,7 @@ const QuestionList: React.FC = () => {
         cache: "no-store",
       });
       const data = await response.json();
-
+      console.log(data);
       if (response.ok) {
         setQuestions(data);
         setFilteredQuestions(data);
